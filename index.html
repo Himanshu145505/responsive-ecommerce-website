@@ -1,5 +1,3 @@
-<!--Advancements Has to Be Done  -->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,50 +14,95 @@
     </head>
     <body>
         <!--===== HEADER =====-->
-        <header class="l-header">
-            
+        <header class="l-header" aria-label="Site Header">
+            <nav class="nav">
+                <a href="#" class="nav__logo">
+                    <img src="assets/img/logo.png" alt="E-Commerce Logo" class="logo">
+                </a>
+                <ul class="nav__menu">
+                    <li><a href="#home" class="nav__link">Home</a></li>
+                    <li><a href="#featured" class="nav__link">Featured</a></li>
+                    <li><a href="#new" class="nav__link">New Arrivals</a></li>
+                    <li><a href="#suscribe" class="nav__link">Subscribe</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main class="l-main">
             <!--===== HOME =====-->
             <section class="home" id="home">
-                
+                <h1>Welcome to Our E-Commerce Store</h1>
+                <p>Discover the best products at unbeatable prices.</p>
+                <button class="button">Shop Now</button>
             </section>
 
             <!--===== COLLECTION =====-->
-            <section class="collection section">
-                
+            <section class="collection section" aria-label="Product Collection">
+                <h2>Our Collections</h2>
+                <p>Explore a wide variety of products tailored to your needs.</p>
             </section>
 
             <!--===== FEATURED PRODUCTS =====-->
-            <section class="featured section" id="featured">
-                
+            <section class="featured section" id="featured" aria-label="Featured Products">
+                <h2>Featured Products</h2>
+                <div class="featured__container">
+                    <div class="product">
+                        <img src="assets/img/product1.jpg" alt="Product 1" class="product__img">
+                        <h3 class="product__title">Product 1</h3>
+                        <span class="product__price">$25</span>
+                    </div>
+                    <div class="product">
+                        <img src="assets/img/product2.jpg" alt="Product 2" class="product__img">
+                        <h3 class="product__title">Product 2</h3>
+                        <span class="product__price">$30</span>
+                    </div>
+                </div>
             </section>
 
             <!--===== OFFER =====-->
-            <section class="offer section">
-                
+            <section class="offer section" aria-label="Special Offers">
+                <h2>Limited Time Offer</h2>
+                <p>Get up to 50% off on select products. Hurry, while stocks last!</p>
             </section>
 
             <!--===== NEW ARRIVALS =====-->
-            <section class="featured section" id="new">
-                
+            <section class="featured section" id="new" aria-label="New Arrivals">
+                <h2>New Arrivals</h2>
+                <div class="featured__container">
+                    <div class="product">
+                        <img src="assets/img/product3.jpg" alt="Product 3" class="product__img">
+                        <h3 class="product__title">Product 3</h3>
+                        <span class="product__price">$40</span>
+                    </div>
+                    <div class="product">
+                        <img src="assets/img/product4.jpg" alt="Product 4" class="product__img">
+                        <h3 class="product__title">Product 4</h3>
+                        <span class="product__price">$45</span>
+                    </div>
+                </div>
             </section>
 
             <!--===== NEWSLETTER =====-->
-            <section class="newsletter section" id="suscribe">
-                
+            <section class="newsletter section" id="suscribe" aria-label="Newsletter Signup">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with our latest offers and new arrivals.</p>
+                <input type="email" placeholder="Enter your email" aria-label="Email">
+                <button class="button">Subscribe</button>
             </section>
 
             <!--===== SPONSORS =====-->
-            <section class="sponsors section">
-                
+            <section class="sponsors section" aria-label="Our Sponsors">
+                <h2>Our Trusted Sponsors</h2>
+                <div class="sponsors__container">
+                    <img src="assets/img/sponsor1.png" alt="Sponsor 1" class="sponsor__img">
+                    <img src="assets/img/sponsor2.png" alt="Sponsor 2" class="sponsor__img">
+                </div>
             </section>
         </main>
 
         <!--===== FOOTER =====-->
-        <footer class="footer section">
-            
+        <footer class="footer section" aria-label="Site Footer">
+            <p>&copy; 2024 E-Commerce Website. All Rights Reserved.</p>
         </footer>
 
         <!--===== MAIN JS =====--> 
