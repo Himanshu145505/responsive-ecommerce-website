@@ -1,31 +1,38 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
-/*===== VARIABLES CSS =====*/
+/*===== VARIABLES =====*/
 :root {
-  --header-height: 3rem;
+  /* Font Weights */
   --font-semi: 600;
   --font-bold: 700;
-}
 
-/*===== Colores =====*/
-:root {
+  /* Colors */
   --second-color: #E55947;
   --second-color-alt: #D2321E;
   --white-color: #FAFAFF;
   --dark-color: #101010;
   --dark-color-light: #606060;
   --gray-color: #F0F1F3;
-}
 
-/*===== Fuente y tipografia =====*/
-:root {
+  /* Typography */
   --body-font: 'Open Sans', sans-serif;
   --big-font-size: 3rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --small-font-size: .75rem;
+
+  /* Spacing */
+  --header-height: 3rem;
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+
+  /* Z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
 @media screen and (min-width: 1024px) {
@@ -38,21 +45,7 @@
   }
 }
 
-/*===== Margenes =====*/
-:root {
-  --mb-1: 0.5rem;
-  --mb-2: 1rem;
-  --mb-3: 1.5rem;
-  --mb-4: 2rem;
-}
-
-/*===== z index =====*/
-:root {
-  --z-tooltip: 10;
-  --z-fixed: 100;
-}
-
-/*===== BASE =====*/
+/*===== RESET STYLES =====*/
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -89,45 +82,50 @@ img {
   height: auto;
 }
 
-/*===== CLASS CSS ===== */
+/*===== BUTTONS =====*/
+button {
+  background-color: var(--second-color);
+  color: var(--white-color);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: var(--font-semi);
+  transition: background-color 0.3s ease;
+}
 
+button:hover {
+  background-color: var(--second-color-alt);
+}
 
-/*===== LAYOUT =====*/
+/*===== FOCUS STATES FOR ACCESSIBILITY =====*/
+a:focus, button:focus {
+  outline: 2px dashed var(--second-color);
+  outline-offset: 3px;
+}
 
+/*===== RESPONSIVE MEDIA QUERIES =====*/
+@media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 4rem;
+    --h1-font-size: 1.75rem;
+    --normal-font-size: 0.875rem;
+  }
 
-/*===== NAV =====*/
+  body {
+    padding: 1rem;
+  }
+}
 
+@media screen and (max-width: 480px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: 0.75rem;
+  }
+  
+  body {
+    padding: 0.5rem;
+  }
+}
 
-/*=== Show menu ===*/
-
-
-/*===== HOME =====*/
-
-
-/*BUTTONS*/
-
-
-/*===== COLLECTION =====*/
-
-
-/*===== FEATURED PRODUCTS =====*/
-
-
-/*===== OFFER =====*/
-
-
-/*===== NEW ARRIVALS =====*/
-
-
-/*===== NEWSLETTER =====*/
-
-
-/*===== SPONSORS =====*/
-
-
-/*===== FOOTER =====*/
-
-
-/* ===== MEDIA QUERIES=====*/
-
-
+/* More styles and sections to be completed as needed */
