@@ -8,46 +8,49 @@
   --font-bold: 700;
 
   /* Colors */
-  --second-color: #E55947;
-  --second-color-alt: #D2321E;
+  --primary-color: #E55947;
+  --primary-hover: #D2321E;
   --white-color: #FAFAFF;
   --dark-color: #101010;
-  --dark-color-light: #606060;
-  --gray-color: #F0F1F3;
+  --gray-light: #F0F1F3;
+  --dark-light: #606060;
 
   /* Typography */
-  --body-font: 'Open Sans', sans-serif;
-  --big-font-size: 3rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .75rem;
+  --font-family: 'Open Sans', sans-serif;
+  --font-size-large: clamp(2.5rem, 5vw, 3rem);
+  --font-size-h1: clamp(1.5rem, 3vw, 2.25rem);
+  --font-size-h2: clamp(1.25rem, 2.5vw, 1.5rem);
+  --font-size-normal: clamp(0.875rem, 2vw, 1rem);
+  --font-size-small: clamp(0.75rem, 1.5vw, 0.813rem);
 
   /* Spacing */
   --header-height: 3rem;
-  --mb-1: 0.5rem;
-  --mb-2: 1rem;
-  --mb-3: 1.5rem;
-  --mb-4: 2rem;
+  --spacing-1: 0.5rem;
+  --spacing-2: 1rem;
+  --spacing-3: 1.5rem;
+  --spacing-4: 2rem;
 
   /* Z-index */
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
+/* Media Query for Larger Screens */
 @media screen and (min-width: 1024px) {
   :root {
-    --big-font-size: 6rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .813rem;
+    --font-size-large: 6rem;
+    --font-size-h1: 2.25rem;
+    --font-size-h2: 1.5rem;
+    --font-size-normal: 1rem;
+    --font-size-small: .813rem;
   }
 }
 
 /*===== RESET STYLES =====*/
 *, ::before, ::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -55,28 +58,35 @@ html {
 }
 
 body {
-  margin: var(--header-height) 0 0 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+  font-family: var(--font-family);
+  font-size: var(--font-size-normal);
   color: var(--dark-color);
   line-height: 1.6;
+  margin-top: var(--header-height);
 }
 
+/* Headings and Paragraphs */
 h1, h2, p {
   margin: 0;
 }
 
+/* Lists */
 ul {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: var(--dark-color);
 }
 
+a:focus, button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* Images */
 img {
   max-width: 100%;
   height: auto;
@@ -84,7 +94,7 @@ img {
 
 /*===== BUTTONS =====*/
 button {
-  background-color: var(--second-color);
+  background-color: var(--primary-color);
   color: var(--white-color);
   padding: 0.75rem 1.5rem;
   border: none;
@@ -94,21 +104,22 @@ button {
 }
 
 button:hover {
-  background-color: var(--second-color-alt);
+  background-color: var(--primary-hover);
 }
 
-/*===== FOCUS STATES FOR ACCESSIBILITY =====*/
+/* Accessibility focus styles */
 a:focus, button:focus {
-  outline: 2px dashed var(--second-color);
-  outline-offset: 3px;
+  outline: 3px solid var(--primary-color);
+  outline-offset: 4px;
+  background-color: var(--primary-hover);
 }
 
 /*===== RESPONSIVE MEDIA QUERIES =====*/
 @media screen and (max-width: 768px) {
   :root {
-    --big-font-size: 4rem;
-    --h1-font-size: 1.75rem;
-    --normal-font-size: 0.875rem;
+    --font-size-large: 4rem;
+    --font-size-h1: 1.75rem;
+    --font-size-normal: 0.875rem;
   }
 
   body {
@@ -118,9 +129,9 @@ a:focus, button:focus {
 
 @media screen and (max-width: 480px) {
   :root {
-    --big-font-size: 3rem;
-    --h1-font-size: 1.5rem;
-    --normal-font-size: 0.75rem;
+    --font-size-large: 3rem;
+    --font-size-h1: 1.5rem;
+    --font-size-normal: 0.75rem;
   }
   
   body {
@@ -128,4 +139,4 @@ a:focus, button:focus {
   }
 }
 
-/* More styles and sections to be completed as needed */
+/* Additional sections can follow */
